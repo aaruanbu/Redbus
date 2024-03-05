@@ -88,7 +88,6 @@ export const Home = () => {
   };
 
   let froms = ({ target: { name, value } }) => {
-    const pattern = /^[a-zA-Z0-9]+$/;
     if (name === "nm1") {
       setIn1(value);
       setIsRandom(isRandomSequence(value));

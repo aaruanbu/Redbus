@@ -21,7 +21,7 @@ export const Naves = () => {
     },
   ];
   let go = () => {
-    home("/Project-Redbus");
+    home("/Redbus");
   };
   let as = { id: 1 };
   return (
