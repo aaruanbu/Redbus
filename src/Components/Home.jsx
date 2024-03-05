@@ -31,7 +31,6 @@ import back from "./Img/appInstallbg.svg";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 export const Home = () => {
   const currentDate = new Date();
-  // const formattedDate = currentDate.toISOString().split("T")[0];
   const [in1, setIn1] = useState("");
   const [in2, setIn2] = useState("");
   const [in3, setIn3] = useState(new Date());
