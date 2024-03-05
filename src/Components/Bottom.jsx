@@ -44,7 +44,6 @@ export const Bottom = () => {
             <MdLiveHelp />
           </Box>
           <Box>
-            {/* <MdAccountCircle /> */}
             <Drops />
           </Box>
         </Box>
