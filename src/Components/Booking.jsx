@@ -1588,7 +1588,6 @@ export const Booking = () => {
                         borderRadius: "5px",
                         display: "flex",
                         alignItems: "center",
-                        display: "flex",
                       }}
                     >
                       <SosIcon />
