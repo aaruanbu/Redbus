@@ -15,7 +15,6 @@ import { FaTag } from "react-icons/fa6";
 import ReactDatePicker from "react-datepicker";
 import FormGroup from "@mui/material/FormGroup";
 import { booktrue, updates, passengerinfo } from "./Slices";
-// import { Tckts } from "./Tickets";
 import { useDispatch, useSelector } from "react-redux";
 import { Passengerinf } from "./Passengerinfo";
 import { useSearchParams, useNavigate } from "react-router-dom";
