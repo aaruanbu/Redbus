@@ -10,17 +10,14 @@ import { Bottom_two } from "./Footerss";
 import { useSelector } from "react-redux";
 
 export const Routss = () => {
-  let pass = useSelector((pas) => pas.datas.passengers)
+  let pass = useSelector((pas) => pas.datas.passengers);
   return (
     <>
       <BrowserRouter>
         <Naves />
-
         <Routes>
-          {/* <Route path="/" element={<Naves />} > </Route> */}
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/Project-Redbus" element={<Home />}></Route>
           <Route path="/booking" element={<Booking />}></Route>
-          {/* <Route path="/seatbooks" elememt={<Seatbooks />}></Route> */}
           <Route path="/seatbooks" element={<Seatbooks />}></Route>
           <Route path="/notfound" element={<Notfound />}></Route>
         </Routes>

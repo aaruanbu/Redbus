@@ -31,7 +31,10 @@ export const Bottom = () => {
             backgroundColor: "ThreeDFace",
           }}
         >
-          <Box sx={{ cursor: "pointer" }} onClick={() => hme("/")}>
+          <Box
+            sx={{ cursor: "pointer" }}
+            onClick={() => hme("/Project-Redbus")}
+          >
             <IoHomeSharp />
           </Box>
           <Box>
