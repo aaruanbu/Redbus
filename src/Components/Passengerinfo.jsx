@@ -28,7 +28,7 @@ export const Passengerinf = (mins) => {
 
   const pasenger = useSelector((da) => da.datas.passengers);
   const stat = useSelector((dat) => dat.datas.Ars);
-  console.log(mins);
+  //console(mins);
   const [selectedOption, setSelectedOption] = useState("");
   const [inp1, setInp1] = useState("");
   const [inp2, setInp2] = useState("");
@@ -97,7 +97,7 @@ export const Passengerinf = (mins) => {
           }
         : val;
     });
-    // console.log(book);
+    // //console(book);
     dispatch(updates(book));
     dispatch(passengerinfo(false));
     setOpen(false);

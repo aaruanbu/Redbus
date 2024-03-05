@@ -85,7 +85,7 @@ export const Seatbooks = () => {
   });
   let ones = ssssss?.sort();
   let sortings = ones[0];
-  console.log(sortings);
+  //console(sortings);
   let bustimess = bussess?.map((v) => {
     return v.bustime;
   });
@@ -161,14 +161,11 @@ export const Seatbooks = () => {
         ? {
             ...vals,
             busses: vals.busses.map((valuess, indexx) => {
-              return valuess.busid === bsid
-                ? console.log(valuess.boarding)
-                : "";
+              return valuess.busid === bsid ? console(valuess.boarding) : "";
             }),
           }
         : "";
     });
-    console.log(deded);
   }, [orgnl, ss, dt]);
   let srss = () => {};
   if (minmem?.length < 1) {

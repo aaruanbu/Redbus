@@ -17,7 +17,7 @@ export const Notfound = () => {
   let recpnt = parm.get("reachpoint");
   let busnumber = Number(parm.get("bsnm"));
   let dtss = parm.get("dates");
-  //console.log(dtss)
+  ////console(dtss)
 
   const [dt, setDt] = useState(dtss);
   const [isRotated, setIsRotated] = useState(false);
@@ -39,7 +39,7 @@ export const Notfound = () => {
   const [month, setMont] = useState();
   const [formattedDate, setFormatted] = useState();
   useEffect(() => {
-    // ////console.log(typeof dt)
+    // //////console(typeof dt)
     if (typeof dt === "object" && dt !== null) {
       const dates_1 = dt.getDate();
       const monttr = dt.getMonth();
@@ -59,16 +59,16 @@ export const Notfound = () => {
         "Dec",
       ];
       const monthName = months[monttr];
-      //console.log(dates_1, monthName, yers)
+      ////console(dates_1, monthName, yers)
       setDaye(dates_1);
       setMonthstr(monthName);
-      //console.log(monthstr)
+      ////console(monthstr)
       setYear(yers);
       setFormatted(new Date(yers, monttr, dates_1));
     }
     if (typeof dt === "string") {
       const dateComponents = dt?.split(" ");
-      //console.log(dateComponents);
+      ////console(dateComponents);
       setDaye(parseInt(dateComponents[2]));
       setMonthstr(dateComponents[1]);
       setMontAbbr(dateComponents[1]);
@@ -87,8 +87,8 @@ export const Notfound = () => {
         Nov: 10,
         Dec: 11,
       };
-      //console.log(monthstr)
-      //console.log(monthMap[monthAbbreviation])
+      ////console(monthstr)
+      ////console(monthMap[monthAbbreviation])
       setMont(monthMap[monthAbbreviation]);
       setFormatted(new Date(year, month, day));
     }
@@ -128,23 +128,23 @@ export const Notfound = () => {
     setMdfys(false);
   };
 
-  ////console.log(gopnt, drpnt, "&&", goingpnts, recpnts)
+  //////console(gopnt, drpnt, "&&", goingpnts, recpnts)
   const isRandomSequence = (value) => {
     const randomnessThreshold = 0.6;
     const uniqueCharacters = new Set(value.split(""));
     const uniquenessRatio = uniqueCharacters.size / value.length;
-    ////////console.log(uniquenessRatio)
+    //////////console(uniquenessRatio)
     return uniquenessRatio < randomnessThreshold;
   };
   const isRandomSequence_one = (value) => {
     const randomratio = 0.6;
     const uniqueCharacters = new Set(value.split(""));
     const uniqueletter = uniqueCharacters.size / value.length;
-    // ////////console.log(uniquenessRatio)
+    // //////////console(uniquenessRatio)
     return uniqueletter < randomratio;
   };
   let chngbus = () => {
-    ////console.log(gopnt, drpnt)
+    //////console(gopnt, drpnt)
     if (gopnt === drpnt) {
       alert("dont Enter same Place");
     } else if (isRandom || isRandom_one) {
@@ -168,16 +168,16 @@ export const Notfound = () => {
       let sss = dubl?.map((v, i) => {
         return v.from !== gopnt || v.to !== drpnt ? false : true;
       });
-      ////////console.log(sss)
+      //////////console(sss)
       let ddd = sss?.some((v, i) => v);
-      ////////console.log(ddd)
+      //////////console(ddd)
       if (ddd === false) {
       }
       if (ddd === true) {
         let sssss = dubl?.find((v, i) =>
           v.from === goingpnts && v.to === drpnt ? v : ""
         );
-        ////////console.log(sssss)
+        //////////console(sssss)
         setBusnumbers(sssss?.busno);
         gobook(
           `/booking?gopoint=${goingpnts}&&reachpoint=${drpnt}&&bsnm=${sssss?.busno}&&dates=${formattedDate}`

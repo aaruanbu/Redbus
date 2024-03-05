@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 import Button from "@mui/material/Button";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Box, } from "@mui/material";
+import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { MdAccountCircle } from "react-icons/md";
 import Pass from "./Pass";
@@ -18,10 +18,6 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Input as BaseInput, inputClasses } from "@mui/base/Input";
 import Visibility from "@mui/material/Icon";
-
-
-
-
 
 const Input = React.forwardRef(function CustomInput(props, ref) {
   const { slots, ...other } = props;
@@ -51,18 +47,17 @@ Input.propTypes = {
   }),
 };
 export default function ResponsiveDialog() {
-
-  const [er, setEr] = React.useState(false)
+  const [er, setEr] = React.useState(false);
   const [values, setValues] = React.useState({
     email: "",
     password: "",
     showPassword: false,
   });
-  // console.log(values)
+  // //console(values)
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
-  // console.log(values)
+  // //console(values)
   const handleClickShowPassword = () => {
     setValues({
       ...values,
@@ -75,18 +70,17 @@ export default function ResponsiveDialog() {
   };
   const submits = () => {
     if (values.email === "" || values.password === "") {
-      setEr(true)
-    }
-    else {
-      setDialogOpen(false)
-      setEr(false)
+      setEr(true);
+    } else {
+      setDialogOpen(false);
+      setEr(false);
       setValues({
         email: "",
         password: "",
-        showPassword: false
-      })
+        showPassword: false,
+      });
     }
-  }
+  };
 
   // const DialogBox = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -97,22 +91,26 @@ export default function ResponsiveDialog() {
 
   const closeDialog = () => {
     setDialogOpen(false);
-    setEr(false)
+    setEr(false);
     setValues({
       email: "",
       password: "",
-      showPassword: false
-    })
+      showPassword: false,
+    });
   };
 
   return (
     <Box sx={{ zIndex: "999" }}>
-      <Box
-        sx={{ display: "flex" }}
-        variant="outlined"
-        onClick={openDialog}
-      >
-        <Box display={{ xs: "none", md: "block", dispaly: "flex", sm: "block", xl: "block" }}>
+      <Box sx={{ display: "flex" }} variant="outlined" onClick={openDialog}>
+        <Box
+          display={{
+            xs: "none",
+            md: "block",
+            dispaly: "flex",
+            sm: "block",
+            xl: "block",
+          }}
+        >
           <Box sx={{ display: "flex" }}>
             <PiUserCircle style={{ fontSize: "20px", display: "inline" }} />
             Account{" "}
@@ -121,19 +119,23 @@ export default function ResponsiveDialog() {
             />
           </Box>
         </Box>
-        <Box display={{ xs: "block", md: "none", sm: "none", xl: "none" }}><MdAccountCircle /></Box>
+        <Box display={{ xs: "block", md: "none", sm: "none", xl: "none" }}>
+          <MdAccountCircle />
+        </Box>
       </Box>
 
       {isDialogOpen && (
         <Box className="overlay">
           <Box className="dialog" onClick={(e) => e.stopPropagation()}>
-
             <Box sx={{ display: "flex" }}>
-
               <Box>
-                <Box display={{
-                  xs: "none", sm: "block", md: "block", xl: "block"
-                }}
+                <Box
+                  display={{
+                    xs: "none",
+                    sm: "block",
+                    md: "block",
+                    xl: "block",
+                  }}
                   component="img"
                   src="https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg"
                   sx={{ width: "100%", padding: "10px" }}
@@ -151,7 +153,9 @@ export default function ResponsiveDialog() {
                     component="img"
                     src="https://s3.rdbuz.com/Images/logo_r.png"
                   />
-                  <Box  ><IoClose onClick={closeDialog} /></Box>
+                  <Box>
+                    <IoClose onClick={closeDialog} />
+                  </Box>
                 </Box>
                 <Box
                   component="h3"
@@ -165,20 +169,24 @@ export default function ResponsiveDialog() {
                       // position: "relative",
                       zIndex: "20",
                       gap: 0,
-                      margin: "5px"
+                      margin: "5px",
                     }}
                   >
-                    <Box sx={{ margin: "5%" }} >
+                    <Box sx={{ margin: "5%" }}>
                       <Input
                         id="outlined-start-adornment"
                         type="email"
                         value={values.email}
                         onChange={handleChange("email")}
                         placeholder="Enter Your Email "
-
-
                       />
-                      {er && values.email === "" ? <p style={{ color: "red", fontWeight: "700" }}>Enter Your Email</p> : ""}
+                      {er && values.email === "" ? (
+                        <p style={{ color: "red", fontWeight: "700" }}>
+                          Enter Your Email
+                        </p>
+                      ) : (
+                        ""
+                      )}
                     </Box>
                     <Box sx={{ margin: "5%" }}>
                       <Input
@@ -204,29 +212,52 @@ export default function ResponsiveDialog() {
                           </InputAdornment>
                         }
                       />
-                      {er && values.password === "" ? <p style={{ color: "red", fontWeight: "700" }}>Enter Your Password</p> : ""}
+                      {er && values.password === "" ? (
+                        <p style={{ color: "red", fontWeight: "700" }}>
+                          Enter Your Password
+                        </p>
+                      ) : (
+                        ""
+                      )}
                     </Box>
-                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                      <Button sx={{ width: "80%", backgroundColor: "red", textAlign: "center", color: "black", fontWeight: "700" }} autoFocus onClick={submits}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Button
+                        sx={{
+                          width: "80%",
+                          backgroundColor: "red",
+                          textAlign: "center",
+                          color: "black",
+                          fontWeight: "700",
+                        }}
+                        autoFocus
+                        onClick={submits}
+                      >
                         login
                       </Button>
                     </Box>
                   </Box>
-
                 </Box>
 
-                <Box sx={{ display: "flex", justifyContent: "center", margin: "10px" }} >
-                </Box>
-
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "10px",
+                  }}
+                ></Box>
               </Box>
             </Box>
-
           </Box>
         </Box>
       )}
     </Box>
   );
-
 }
 const blue = {
   100: "#DAECFF",
@@ -258,8 +289,9 @@ border-radius: 8px;
 color: ${theme.palette.mode === "dark" ? grey[300] : grey[500]};
 background: ${theme.palette.mode === "dark" ? grey[900] : "#fff"};
 border: 1px solid ${theme.palette.mode === "dark" ? grey[700] : grey[200]};
-box-shadow: 0px 2px 4px ${theme.palette.mode === "dark" ? "rgba(0,0,0, 0.5)" : "rgba(0,0,0, 0.05)"
-    };
+box-shadow: 0px 2px 4px ${
+    theme.palette.mode === "dark" ? "rgba(0,0,0, 0.5)" : "rgba(0,0,0, 0.05)"
+  };
 display: flex;
 align-items: center;
 justify-content: center;
@@ -267,8 +299,9 @@ justify-content: center;
 
 &.${inputClasses.focused} {
   border-color: ${blue[400]};
-  box-shadow: 0 0 0 3px ${theme.palette.mode === "dark" ? blue[600] : blue[200]
-    };
+  box-shadow: 0 0 0 3px ${
+    theme.palette.mode === "dark" ? blue[600] : blue[200]
+  };
 }
 
 &:hover {
@@ -311,8 +344,8 @@ color: ${theme.palette.mode === "dark" ? grey[300] : grey[700]};
 );
 
 const InputAdornment = styled("div")`
-margin: 8px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
+  margin: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 `;
