@@ -415,7 +415,6 @@ export const Passengerinf = (mins) => {
                                 textAlign: "center",
                                 color: "black",
                                 fontWeight: "700",
-                                backgroundColor: "red",
                               }}
                               autoFocus
                               onClick={proceedaa}
