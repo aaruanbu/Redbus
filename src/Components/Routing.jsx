@@ -16,7 +16,7 @@ export const Routss = () => {
       <BrowserRouter>
         <Naves />
         <Routes>
-          <Route path="/Project-Redbus" element={<Home />}></Route>
+          <Route path="/Redbus" element={<Home />}></Route>
           <Route path="/booking" element={<Booking />}></Route>
           <Route path="/seatbooks" element={<Seatbooks />}></Route>
           <Route path="/notfound" element={<Notfound />}></Route>
