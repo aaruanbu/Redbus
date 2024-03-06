@@ -33,6 +33,7 @@ import { pink } from "@mui/material/colors";
 import Checkbox from "@mui/material/Checkbox";
 import { Typography } from "@mui/material";
 
+import { CiHeadphones } from "react-icons/ci";
 import { PiPlugCharging } from "react-icons/pi";
 import SosIcon from "@mui/icons-material/Sos";
 import { BiBlanket } from "react-icons/bi";
