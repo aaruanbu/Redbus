@@ -27,8 +27,8 @@ export const Notfound = () => {
   const [chg, setChg] = useState(false);
   const [gopnt, setGopnt] = useState(goingpnt);
   const [drpnt, setDrpnt] = useState(recpnt);
-  const [goingpnts, setGoingpnt] = useState(goingpnt);
-  const [recpnts, setRecpnt] = useState(recpnt);
+  const [goingpnts, setGoingpnt] = useState();
+  const [recpnts, setRecpnt] = useState();
   const [isRandom, setIsRandom] = useState(false);
   const [isRandom_one, setIsRandom_one] = useState(false);
   const [busnumbers, setBusnumbers] = useState(busnumber);
