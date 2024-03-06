@@ -2030,13 +2030,13 @@ export const Booking = () => {
                                     <span
                                       style={{
                                         backgroundColor: " #c2c2c2",
-                                        padding: "5px",
-                                        margin: "4px",
+                                        padding: "4px",
+                                        margin: "0 5px",
                                         borderRadius: "5px",
                                       }}
                                     >
                                       <FaMapLocationDot
-                                        style={{ margin: "0px 5px" }}
+                                        style={{ marginRignt: " 5px" }}
                                       />
                                       Live Tracking
                                     </span>
@@ -2048,7 +2048,7 @@ export const Booking = () => {
                                       display: "flex",
                                       alignItems: "center",
                                       justifyContent: "space-around",
-                                      gap: "10%",
+                                      gap: "3px",
                                     }}
                                   >
                                     <li title="Deep Cleaned Buses">

@@ -32,7 +32,6 @@ import { RxSun } from "react-icons/rx";
 import { pink } from "@mui/material/colors";
 import Checkbox from "@mui/material/Checkbox";
 import { Typography } from "@mui/material";
-
 import { CiHeadphones } from "react-icons/ci";
 import { PiPlugCharging } from "react-icons/pi";
 import SosIcon from "@mui/icons-material/Sos";
@@ -909,11 +908,11 @@ export const Seatbooks = () => {
                             style={{
                               backgroundColor: " #c2c2c2",
                               padding: "5px",
-                              margin: "4px",
+                              margin: "0 4px",
                               borderRadius: "5px",
                             }}
                           >
-                            <FaMapLocationDot style={{ margin: "0px 5px" }} />
+                            <FaMapLocationDot style={{ marginRight: "5px" }} />
                             Live Tracking
                           </span>
                         ) : (
@@ -924,7 +923,7 @@ export const Seatbooks = () => {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "space-around",
-                            gap: "10%",
+                            gap: "3px",
                           }}
                         >
                           <li title="Deep Cleaned Buses">
