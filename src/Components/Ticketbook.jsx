@@ -161,7 +161,9 @@ export const Seatbooks = () => {
         ? {
             ...vals,
             busses: vals.busses.map((valuess, indexx) => {
-              return valuess.busid === bsid ? console(valuess.boarding) : "";
+              return valuess.busid === bsid
+                ? console.log(valuess.boarding)
+                : "";
             }),
           }
         : "";
