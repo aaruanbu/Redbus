@@ -94,7 +94,7 @@ export const Bottom_two = () => {
               marginTop: "19px",
             }}
           >
-            <p> ©2024 Redbus India Pvt Ltd. All rights reserved</p>
+            <p> © Aaru Anbu All rights reserved</p>
             <Box
               sx={{
                 display: "flex",

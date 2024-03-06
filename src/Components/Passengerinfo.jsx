@@ -137,40 +137,43 @@ export const Passengerinf = (mins) => {
       <Box>
         <Box
           sx={{
-            position: "absolute",
+            position: "fixed",
             zIndex: "1000",
             left: "0",
             top: "0",
+            right: "0",
+            bottom: "0",
             width: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5);",
-            height: {
-              xl: "130%",
-              md: "139%",
-              sm: "120%",
-              xs: "120%",
-            },
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
           }}
         >
           <Box
             sx={{
               position: "absolute",
-              top: "0",
-              bottom: "0",
-              dispaly: "flex",
-              justifyContent: "space-between",
-              padding: "3%",
-              right: "0",
-              backgroundColor: "#ffffffea",
+              top: "50%",
+              /* right: 0; */
+              left: {
+                xs: "50%",
+                sm: "50%",
+                md: "75%",
+                xl: "75%",
+              },
+              /* bottom: 0%; */
               width: {
                 xs: "100%",
                 sm: "100%",
-                md: "60%",
+                md: "50%",
+                xl: "50%",
               },
-              height: {
-                xs: "155%",
-                md: "max-content",
-                xl: "max-content",
-              },
+              height: "100%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: "white",
+              dispaly: "flex",
+              justifyContent: "space-between",
+              padding: "3.5%",
+              borderRadius: "5px",
+              overflowY: "auto",
             }}
           >
             <Box

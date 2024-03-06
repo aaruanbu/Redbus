@@ -3,7 +3,7 @@ import { Routss } from "./Components/Routing";
 import { Provider } from "react-redux";
 import { Stres } from "./Components/Store";
 import { useEffect, useState } from "react";
-
+import { Box } from "@mui/material";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -19,6 +19,7 @@ function App() {
       {loading ? (
         <div className="loader">
           <div className="rgb-overlay"></div>
+          <Box></Box>
           <div className="loader">
             <span>L</span>
             <span>O</span>
