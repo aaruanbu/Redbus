@@ -137,19 +137,32 @@ export const Home = () => {
             }
           : val;
       });
-      let sss = datas?.map((v, i) => {
-        return v.from !== in1 || v.to !== in2 ? false : true;
-      });
-      console.log(sss);
-      let ddd = sss?.some();
-      console.log(ddd);
+      // let sss = datas?.map((v, i) => {
+      //   return v.from !== in1 || v.to !== in2 ? false : true;
+      // });
+      // console.log(sss);
+      // let ddd = sss?.some();
+      // console.log(ddd);
 
-      if (ddd === true) {
-        let sssss = datas?.find((v, i) =>
-          v.from === in1 && v.to === in2 ? v : ""
-        );
+      // if (ddd === true) {
+      //   let sssss = datas?.find((v, i) =>
+      //     v.from === in1 && v.to === in2 ? v : ""
+      //   );
+      //   gobook(
+      //     `/booking?gopoint=${in1}&&reachpoint=${in2}&&bsnm=${sssss?.busno}&&dates=${in3}`
+      //   );
+      // } else {
+      //   notfoundbus(
+      //     `/notfound?gopoint=${in1}&&reachpoint=${in2}&&dates=${in3}`
+      //   );
+      // }
+      // dispatch(updates(ss));
+      const foundData = datas.find((val) => val.from === in1 && val.to === in2);
+
+      if (foundData) {
+        const { busno } = foundData;
         gobook(
-          `/booking?gopoint=${in1}&&reachpoint=${in2}&&bsnm=${sssss?.busno}&&dates=${in3}`
+          `/booking?gopoint=${in1}&&reachpoint=${in2}&&bsnm=${busno}&&dates=${in3}`
         );
       } else {
         notfoundbus(
