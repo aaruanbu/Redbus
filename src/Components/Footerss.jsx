@@ -94,7 +94,7 @@ export const Bottom_two = () => {
               marginTop: "19px",
             }}
           >
-            <p> © Aaru Anbu All rights reserved</p>
+            <p> © Created By Aaru Anbu All rights reserved</p>
             <Box
               sx={{
                 display: "flex",
