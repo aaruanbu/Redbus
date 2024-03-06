@@ -12,6 +12,13 @@ import { CiCirclePlus } from "react-icons/ci";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { TiArrowSortedDown, TiStar } from "react-icons/ti";
 import { FaTag } from "react-icons/fa6";
+// import { PiPlugCharging } from "react-icons/pi";
+// import SosIcon from "@mui/icons-material/Sos";
+// import { FaBottleWater } from "react-icons/fa6";
+// import { BiBlanket } from "react-icons/bi";
+import { FaBus } from "react-icons/fa6";
+// import { TbLamp2 } from "react-icons/tb";
+// import SosIcon from "@mui/icons-material/Sos";
 import ReactDatePicker from "react-datepicker";
 import FormGroup from "@mui/material/FormGroup";
 import { booktrue, updates, passengerinfo } from "./Slices";
@@ -895,9 +902,7 @@ export const Seatbooks = () => {
                         <h4>{v.boarding}</h4>
                         <h4>{v.droping}</h4>
                       </Box>
-                      <Box>
-                        <FaBusAlt /> <FaBottleWater /> <CiCirclePlus />{" "}
-                        <MdOutlineSos />
+                      <Box sx={{ display: "flex" }}>
                         {v.livetracking ? (
                           <span
                             style={{
@@ -913,6 +918,42 @@ export const Seatbooks = () => {
                         ) : (
                           ""
                         )}
+                        <ul
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            gap: "10%",
+                          }}
+                        >
+                          <li title="Deep Cleaned Buses">
+                            {" "}
+                            {v.cleanbus ? <FaBus /> : ""}
+                          </li>
+                          <li title="Charging Point">
+                            {v.charger ? <PiPlugCharging /> : ""}
+                          </li>
+                          <li title="Emergency Contact Number">
+                            {v.emergencycontact ? <SosIcon /> : ""}
+                          </li>
+                          <li title="Reading Light">
+                            {v.readinglight ? <TbLamp2 /> : ""}
+                          </li>
+
+                          <li title="Bed Sheet">
+                            {v.Blanket ? <BiBlanket /> : ""}
+                          </li>
+                          <li title="Headsets">
+                            {v.headset ? <CiHeadphones /> : ""}
+                          </li>
+                          <li title="Water Bottle">
+                            {v.waterbottle ? (
+                              <FaBottleWater aria-valuetext="waterbottle" />
+                            ) : (
+                              ""
+                            )}
+                          </li>
+                        </ul>
                       </Box>
                     </Box>
                     <Box

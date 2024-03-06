@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { BsSunset } from "react-icons/bs";
 import { TiArrowSortedDown, TiStar } from "react-icons/ti";
-import { FaBottleWater } from "react-icons/fa6";
 import { BiBlanket } from "react-icons/bi";
 import { TbLamp2 } from "react-icons/tb";
 import { Typography } from "@mui/material";
 import { FaTag } from "react-icons/fa6";
+import { FaBottleWater } from "react-icons/fa6";
 import SosIcon from "@mui/icons-material/Sos";
 import ReactDatePicker from "react-datepicker";
 import { PiSunHorizon } from "react-icons/pi";
@@ -2048,7 +2048,7 @@ export const Booking = () => {
                                       display: "flex",
                                       alignItems: "center",
                                       justifyContent: "space-around",
-                                      gap: "12%",
+                                      gap: "10%",
                                     }}
                                   >
                                     <li title="Deep Cleaned Buses">
@@ -2598,6 +2598,7 @@ export const Booking = () => {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "2% 6%",
+            flexWrap: "wrap",
             backgroundColor: "#ededed",
             borderTop: "1px solid black",
           }}
