@@ -85,7 +85,6 @@ export const Seatbooks = () => {
   });
   let ones = ssssss?.sort();
   let sortings = ones[0];
-  //console(sortings);
   let bustimess = bussess?.map((v) => {
     return v.bustime;
   });
