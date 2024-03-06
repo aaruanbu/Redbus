@@ -100,7 +100,7 @@ export const Home = () => {
   };
 
   const isRandomSequence = (value) => {
-    const randomnessThreshold = 0.7;
+    const randomnessThreshold = 0.6;
     const uniqueCharacters = new Set(value.split(""));
     const uniquenessRatio = uniqueCharacters.size / value.length;
     return uniquenessRatio < randomnessThreshold;
