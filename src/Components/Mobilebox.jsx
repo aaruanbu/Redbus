@@ -122,7 +122,7 @@ export const Mobile = () => {
           `/notfound?gopoint=${in1}&&reachpoint=${in2}&&dates=${in3}`
         );
       }
-      dispatch(updates(ss));
+      dispatch(updates(ars));
     }
   };
 
