@@ -185,7 +185,9 @@ export const Notfound = () => {
       // if (ddd === false) {
       //   ("");
       // }
-      const foundData = datas.find((val) => val.from === in1 && val.to === in2);
+      const foundData = dubl?.find(
+        (val) => val.from === goingpnts && val.to === recpnts
+      );
       if (foundData) {
         const { busno } = foundData;
         gobook(
