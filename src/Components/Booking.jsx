@@ -422,17 +422,18 @@ export const Booking = () => {
         return v.from !== gopnt || v.to !== drpnt ? false : true;
       });
       let ddd = sss?.some((v, i) => v);
-      if (ddd === false) {
-        notfoundbus(
-          `/notfound?gopoint=${gopnt}&&reachpoint=${drpnt}&&dates=${formattedDate}`
-        );
-      }
+
       if (ddd === true) {
         let sssss = dubl?.find((v, i) =>
           v.from === gopnt && v.to === drpnt ? v : ""
         );
         setBusnumbers(sssss?.busno);
         setNot_found(false);
+      }
+      if (ddd === false) {
+        notfoundbus(
+          `/notfound?gopoint=${gopnt}&&reachpoint=${drpnt}&&dates=${formattedDate}`
+        );
       }
       dispatch(updates(ars));
       dispatch(dublicate(ars));

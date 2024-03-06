@@ -140,18 +140,20 @@ export const Home = () => {
       let sss = datas?.map((v, i) => {
         return v.from !== in1 || v.to !== in2 ? false : true;
       });
+      console.log(sss);
       let ddd = sss?.some((v) => v);
-      if (ddd === false) {
-        notfoundbus(
-          `/notfound?gopoint=${in1}&&reachpoint=${in2}&&dates=${in3}`
-        );
-      }
+      console.log(ddd);
+
       if (ddd === true) {
         let sssss = datas?.find((v, i) =>
           v.from === in1 && v.to === in2 ? v : ""
         );
         gobook(
           `/booking?gopoint=${in1}&&reachpoint=${in2}&&bsnm=${sssss?.busno}&&dates=${in3}`
+        );
+      } else {
+        notfoundbus(
+          `/notfound?gopoint=${in1}&&reachpoint=${in2}&&dates=${in3}`
         );
       }
       dispatch(updates(ss));

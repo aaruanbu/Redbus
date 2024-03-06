@@ -171,8 +171,7 @@ export const Notfound = () => {
       //////////console(sss)
       let ddd = sss?.some((v, i) => v);
       //////////console(ddd)
-      if (ddd === false) {
-      }
+
       if (ddd === true) {
         let sssss = dubl?.find((v, i) =>
           v.from === goingpnts && v.to === drpnt ? v : ""
@@ -183,7 +182,9 @@ export const Notfound = () => {
           `/booking?gopoint=${goingpnts}&&reachpoint=${drpnt}&&bsnm=${sssss?.busno}&&dates=${formattedDate}`
         );
       }
-
+      if (ddd === false) {
+        ("");
+      }
       dispatch(updates(ars));
       dispatch(dublicate(ars));
       setMdfys(false);
