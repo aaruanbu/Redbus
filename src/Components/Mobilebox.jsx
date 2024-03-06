@@ -109,7 +109,9 @@ export const Mobile = () => {
       //   }
       //   dispatch(updates(ars));
       // }
-      const foundData = datas.find((val) => val.from === in1 && val.to === in2);
+      const foundData = datas?.find(
+        (val) => val.from === in1 && val.to === in2
+      );
       if (foundData) {
         const { busno } = foundData;
         gobook(
