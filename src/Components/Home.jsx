@@ -141,7 +141,7 @@ export const Home = () => {
         return v.from !== in1 || v.to !== in2 ? false : true;
       });
       console.log(sss);
-      let ddd = sss?.some((v) => v);
+      let ddd = sss?.some();
       console.log(ddd);
 
       if (ddd === true) {

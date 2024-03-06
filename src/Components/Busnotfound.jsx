@@ -169,8 +169,8 @@ export const Notfound = () => {
         return v.from !== gopnt || v.to !== drpnt ? false : true;
       });
       //////////console(sss)
-      let ddd = sss?.some((v, i) => v);
-      //////////console(ddd)
+      let ddd = sss?.some();
+      console(ddd);
 
       if (ddd === true) {
         let sssss = dubl?.find((v, i) =>
