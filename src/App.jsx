@@ -10,17 +10,26 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
   return (
     <>
       {loading ? (
-        <div className="loader">
-          <div className="rgb-overlay"></div>
-          <Box></Box>
-          <div className="loader">
+        <Box className="loader">
+          <Box className="rgb-overlay"></Box>
+          <Box
+            sx={{
+              fontSize: {
+                xs: "60px",
+                sm: "90px",
+                md: "130px",
+                xl: "140px",
+              },
+            }}
+            className="loader"
+          >
             <span>L</span>
             <span>O</span>
             <span>A</span>
@@ -28,14 +37,14 @@ function App() {
             <span>I</span>
             <span>N</span>
             <span>G</span>
-          </div>
-        </div>
+          </Box>
+        </Box>
       ) : (
-        <div className="main-content">
+        <Box className="main-content">
           <Provider store={Stres}>
             <Routss />
           </Provider>
-        </div>
+        </Box>
       )}
     </>
   );
