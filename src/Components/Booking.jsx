@@ -417,24 +417,40 @@ export const Booking = () => {
           : val;
       });
 
-      var lll = 0;
-      let sss = dubl?.map((v, i) => {
-        return v.from !== gopnt || v.to !== drpnt ? false : true;
-      });
-      let ddd = sss?.some((v, i) => v);
+      // var lll = 0;
+      // let sss = dubl?.map((v, i) => {
+      //   return v.from !== gopnt || v.to !== drpnt ? false : true;
+      // });
+      // let ddd = sss?.some((v, i) => v);
 
-      if (ddd === true) {
-        let sssss = dubl?.find((v, i) =>
-          v.from === gopnt && v.to === drpnt ? v : ""
-        );
-        setBusnumbers(sssss?.busno);
-        setNot_found(false);
-      }
-      if (ddd === false) {
+      // if (ddd === true) {
+      //   let sssss = dubl?.find((v, i) =>
+      //     v.from === gopnt && v.to === drpnt ? v : ""
+      //   );
+      //   setBusnumbers(sssss?.busno);
+      //   setNot_found(false);
+      // }
+      // if (ddd === false) {
+      //   notfoundbus(
+      //     `/notfound?gopoint=${gopnt}&&reachpoint=${drpnt}&&dates=${formattedDate}`
+      //   );
+      // }
+      const foundData = dubl?.find(
+        (val) => val.from === gopnt && val.to === drpnt
+      );
+      if (foundData) {
+        const { busno } = foundData;
+        setBusnumbers(busno);
+        // gobook(
+        //   `/booking?gopoint=${in1}&&reachpoint=${in2}&&bsnm=${busno}&&dates=${in3}`
+        // );
+      } else {
         notfoundbus(
           `/notfound?gopoint=${gopnt}&&reachpoint=${drpnt}&&dates=${formattedDate}`
         );
       }
+
+      // }
       dispatch(updates(ars));
       dispatch(dublicate(ars));
       setMdfys(false);

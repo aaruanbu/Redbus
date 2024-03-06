@@ -158,7 +158,6 @@ export const Home = () => {
       // }
       // dispatch(updates(ss));
       const foundData = datas.find((val) => val.from === in1 && val.to === in2);
-
       if (foundData) {
         const { busno } = foundData;
         gobook(
