@@ -97,13 +97,13 @@ export const Notfound = () => {
   let inptss = ({ target: { name, value } }) => {
     if (mdfys === true) {
       if (name === "inpt1") {
-        setGopnt(value);
-        setGoingpnt(value);
+        setGopnt(value.toLowerCase());
+        setGoingpnt(value.toLowerCase());
         setIsRandom(isRandomSequence(value));
       }
       if (name === "inpt2") {
-        setDrpnt(value);
-        setRecpnt(value);
+        setDrpnt(value.toLowerCase());
+        setRecpnt(value.toLowerCase());
         setIsRandom_one(isRandomSequence_one(value));
       }
       inpslct();

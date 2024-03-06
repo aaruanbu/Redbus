@@ -39,12 +39,12 @@ export const Mobile = () => {
     const pattern = /^[a-zA-Z0-9]+$/;
 
     if (name === "nm1") {
-      setIn1(value);
+      setIn1(value.toLowerCase());
       setIsRandom(isRandomSequence(value));
     }
 
     if (name === "nm2") {
-      setIn2(value);
+      setIn2(value.toLowerCase());
       setIsRandom_one(isRandomSequence_one(value));
     }
   };
@@ -92,6 +92,7 @@ export const Mobile = () => {
         return v.from !== in1 || v.to !== in2 ? false : true;
       });
       let ddd = sss?.some((v) => v);
+      console.log(sss, ddd);
       if (ddd === false) {
         notfoundbus(
           `/notfound?gopoint=${in1}&&reachpoint=${in2}&&dates=${in3}&&bsnm=${0}`

@@ -89,18 +89,18 @@ export const Home = () => {
 
   let froms = ({ target: { name, value } }) => {
     if (name === "nm1") {
-      setIn1(value);
+      setIn1(value.toLowerCase());
       setIsRandom(isRandomSequence(value));
     }
 
     if (name === "nm2") {
-      setIn2(value);
+      setIn2(value.toLowerCase());
       setIsRandom_one(isRandomSequence_one(value));
     }
   };
-
+  console.log(in1, in2);
   const isRandomSequence = (value) => {
-    const randomnessThreshold = 0.7;
+    const randomnessThreshold = 0.6;
     const uniqueCharacters = new Set(value.split(""));
     const uniquenessRatio = uniqueCharacters.size / value.length;
     return uniquenessRatio < randomnessThreshold;
