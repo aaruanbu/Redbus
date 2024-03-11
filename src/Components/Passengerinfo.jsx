@@ -369,7 +369,7 @@ export const Passengerinf = (mins) => {
                           ) : (
                             ""
                           )}
-                          <Input
+                          {/* <Input
                             sx={{
                               width: "100%",
                               display: "flex",
@@ -402,7 +402,7 @@ export const Passengerinf = (mins) => {
                             <p style={{ color: "red" }}>Enter Your Email</p>
                           ) : (
                             ""
-                          )}
+                          )} */}
                           <Box
                             sx={{
                               display: "flex",

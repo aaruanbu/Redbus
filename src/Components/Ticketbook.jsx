@@ -999,163 +999,451 @@ export const Seatbooks = () => {
                     <Box
                       sx={{
                         width: {
-                          xs: "62%",
-                          sm: "84%",
+                          xs: "65%",
+                          sm: "80%",
                           md: "45%",
-                          xl: "38%",
+                          xl: "35%",
                         },
                       }}
                     >
-                      <>
-                        <Box>
-                          <Box>Lower-Deck</Box>
-                          <Box sx={{ display: "flex" }}>
+                      <Box sx={{ display: "block" }}>
+                        <Box> Lower - deck</Box>
+                        <Box
+                          sx={{
+                            display: {
+                              xs: "block",
+                              sm: "flex",
+                              md: "flex",
+                              xl: "flex",
+                            },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              paddingLeft: "5px !important",
+                              backgroundColor: "white",
+                              borderTop: {
+                                xs: "5px solid gray",
+                                sm: "none",
+                                md: "none",
+                                xl: "none",
+                              },
+                              borderLeft: {
+                                xs: "none",
+                                sm: " 5px solid gray",
+                                md: " 5px solid gray",
+                                xl: " 5px solid gray",
+                              },
+
+                              borderRight: {
+                                xs: "none",
+                                md: "1px solid black",
+                                sm: "1px solid black",
+                                xl: "1px solid black",
+                              },
+                              borderBottom: {
+                                xs: "1px solid black",
+                                sm: "none",
+                                md: "none",
+                                xl: "none",
+                              },
+                              paddingRight: {
+                                xs: "none",
+                                sm: "5px",
+                                md: "5px",
+                                xl: "5px",
+                              },
+                              paddingTop: {
+                                xs: "5px",
+                                md: "12px",
+                                sm: "12px",
+                                xl: "12px",
+                              },
+                              paddingBottom: {
+                                xs: "10px",
+                                sm: "0",
+                                md: "0",
+                                xl: "0",
+                              },
+                            }}
+                          >
                             <Box
                               sx={{
-                                paddingLeft: "5px !important",
-                                backgroundColor: "white",
-                                borderLeft: "5px solid gray",
-                                borderRight: "1px solid black",
-                                paddingRight: "5px",
-                                paddingTop: "12px",
+                                opacity: {
+                                  xs: "0",
+                                  sm: "1",
+                                  md: "1",
+                                  xl: "1",
+                                },
+                                display: {
+                                  xs: "none",
+                                  sm: "block",
+                                  md: "block",
+                                  xl: "block",
+                                },
                               }}
                             >
                               <h1 className="steer1">
                                 <h2 className="steercenter"></h2>
-                                <h2 className="steercenter2"></h2>
+                                {/* <h2 className="steercenter2"></h2> */}
                               </h1>
                             </Box>
-                            <Box className="seatss">
-                              {v.seats?.map((vl, ind) => {
-                                return vl.seatid <= 10 ? (
-                                  <Box sx={{ display: "flex" }} key={ind}>
-                                    <Box>
-                                      {vl.seatshow ? (
-                                        vl.seatbooking ? (
-                                          <Box
-                                            className="seat"
-                                            sx={{
-                                              backgroundColor:
-                                                "rgba(8, 8, 8, 0.137)",
-                                              border: " rgba(0, 0, 0, 0.253)",
-                                            }}
-                                          >
-                                            <p>
-                                              <p
-                                                style={{
-                                                  fontSize: "12px",
-                                                  textAlign: "center",
-                                                  padding: "6px 10px",
-                                                }}
-                                              >
-                                                {/* {vl.seatid} */}
-                                              </p>
-                                            </p>
-                                            <p
-                                              style={{
-                                                padding: "5px 2px",
-                                                border:
-                                                  " 1px solid rgba(0, 0, 0, 0.253)",
-                                                borderRadius: "3px",
-                                              }}
-                                            ></p>
-                                          </Box>
-                                        ) : (
-                                          <Box
-                                            className="seat2"
-                                            onClick={() =>
-                                              bookings(v.busid, vl.seatid)
-                                            }
-                                          >
-                                            <p
-                                              style={{
-                                                fontSize: "12px",
-                                                textAlign: "center",
-                                                padding: "0px 10px",
-                                              }}
-                                            >
-                                              {vl.seatid}
-                                            </p>
-                                            <p
-                                              style={{
-                                                padding: "5px 2px",
-                                                border: "1px solid black",
-                                                borderRadius: "3px",
-                                              }}
-                                            ></p>
-                                          </Box>
-                                        )
-                                      ) : (
-                                        <Box
-                                          className="seat1"
-                                          onClick={() =>
-                                            bookings(v.busid, vl.seatid)
-                                          }
-                                        >
-                                          <p
-                                            style={{
-                                              padding: "5px 2px",
-                                              border: "1px solid black",
-                                              borderRadius: "3px",
-                                            }}
-                                          ></p>
-                                        </Box>
-                                      )}
-                                    </Box>
-                                  </Box>
-                                ) : (
-                                  ""
-                                );
-                              })}
+                            <Box
+                              sx={{
+                                opacity: {
+                                  xs: "1",
+                                  sm: "0",
+                                  md: "0",
+                                  xl: "0",
+                                },
+                                display: {
+                                  xs: "block",
+                                  sm: "none",
+                                  md: "none",
+                                  xl: "none",
+                                },
+                              }}
+                            >
+                              <h1 className="steer2">
+                                <h2 className="steercenter1"></h2>
+                                {/* <h2 className="steercenter2"></h2> */}
+                              </h1>
                             </Box>
                           </Box>
-                        </Box>
-                        <Box sx={{ marginBottom: "2%" }}>
-                          <Box> upper - deck</Box>
                           <Box
                             sx={{
-                              borderLeft: "5px solid gray",
-                              paddingLeft: "8%",
-                              backgroundColor: "white",
+                              // borderLeft: {
+                              //   xs: "none",
+                              //   sm: "5px solid gray !important",
+                              //   md: "5px solid gray !important",
+                              //   xl: "5px solid gray !important",
+                              // },
+                              // borderTop: {
+                              //   xs: "5px solid gray !important",
+                              //   sm: "none",
+                              //   md: "none",
+                              //   xl: "none",
+                              // },
+
+                              gap: {
+                                xs: "35px",
+                                md: "30px",
+                                xl: "30px",
+                                sm: "30px",
+                              },
+                              display: "grid",
+                              columnGap: "30px",
+                              rowGap: "20px",
+                              gridTemplateColumns: {
+                                xs: "repeat(2,auto)",
+                                sm: "repeat(5,auto)",
+                                md: "repeat(5,auto)",
+                                xl: "repeat(5,auto)",
+                              },
+                              //                                     row-gap: 20px;
+                              // column-gap: 30px;
+                              // display: grid !important;
+                              // grid-template-columns: repeat(2, auto);
                             }}
+                            className="seatss"
                           >
-                            <Box className="seatss">
-                              {v.seats?.map((vl, ind) => {
-                                return vl.seatid > 10 ? (
+                            {v.seats?.map((vl, ind) => {
+                              return vl.seatid <= 10 ? (
+                                <>
                                   <Box sx={{ display: "flex" }} key={ind}>
                                     <Box>
                                       {vl.seatshow ? (
                                         vl.seatbooking ? (
                                           <Box
-                                            className="seat"
                                             sx={{
+                                              padding: {
+                                                xl: "5px 3px 5px 5px",
+                                                md: "5px 3px 5px 5px",
+                                                sm: "5px 3px 5px 5px",
+                                                xs: "0px 6px 28px 0px",
+                                              },
+                                              width: {
+                                                xs: "26px",
+                                                sm: "50px",
+                                                md: "50px",
+                                                xl: "50px",
+                                              },
                                               backgroundColor:
                                                 "rgba(8, 8, 8, 0.137)",
-                                              border: " rgba(0, 0, 0, 0.253)",
+                                              border: " rgba(0, 0, 0, 0.226)",
+                                              cursor: "pointer",
                                             }}
+                                            className="seat"
                                           >
-                                            <p>
-                                              <p
-                                                style={{
-                                                  fontSize: "12px",
-                                                  textAlign: "center",
-                                                  padding: "6px 10px",
-                                                }}
-                                              >
-                                                {/* {vl.seatid} */}
-                                              </p>
-                                            </p>
                                             <p
                                               style={{
-                                                padding: "5px 2px",
-                                                border:
-                                                  " 1px solid rgba(0, 0, 0, 0.253)",
-                                                borderRadius: "3px",
+                                                fontSize: "12px",
+                                                textAlign: "center",
+                                                // padding: "6px 10px",
+                                                border: " rgba(0, 0, 0, 0.226)",
                                               }}
                                             ></p>
+                                            <Box
+                                              component="p"
+                                              sx={{
+                                                padding: {
+                                                  xl: "5px 2px",
+                                                  md: "5px 2px",
+                                                  sm: "5px 2px",
+                                                  xs: "2px 5px",
+                                                },
+                                                border:
+                                                  "1px solid rgba(0, 0, 0, 0.253)",
+                                                borderRadius: "3px",
+                                              }}
+                                            ></Box>
                                           </Box>
                                         ) : (
                                           <Box
+                                            className="seat2"
+                                            sx={{
+                                              cursor: "pointer",
+                                              padding: {
+                                                xl: "4px 3px 4px 0px",
+                                                md: "4px 3px 4px 0px",
+                                                sm: "4px 3px 4px 0px",
+                                                xs: "5px 1px 9px 0px",
+                                              },
+                                              width: {
+                                                xs: "26px",
+                                                sm: "50px",
+                                                md: "50px",
+                                                xl: "50px",
+                                              },
+                                              flexDirection: {
+                                                xs: "column-reverse",
+                                                sm: "unset",
+                                                md: "unset",
+                                                xl: "unset",
+                                              },
+                                            }}
+                                            onClick={() =>
+                                              bookings(v.busid, vl.seatid)
+                                            }
+                                          >
+                                            <p
+                                              style={{
+                                                fontSize: "12px",
+                                                textAlign: "center",
+                                                // padding: "0px 10px",
+                                              }}
+                                            >
+                                              {vl.seatid}
+                                            </p>
+                                            <Box
+                                              component="p"
+                                              sx={{
+                                                padding: {
+                                                  xl: "5px 2px",
+                                                  md: "5px 2px",
+                                                  sm: "5px 2px",
+                                                  xs: "2px 5px",
+                                                },
+                                                border: "1px solid black",
+                                                borderRadius: "3px",
+                                              }}
+                                            ></Box>
+                                          </Box>
+                                        )
+                                      ) : (
+                                        <Box
+                                          sx={{
+                                            padding: {
+                                              xl: "5px 3px 5px 5px",
+                                              md: "5px 3px 5px 5px",
+                                              sm: "5px 3px 5px 5px",
+                                              xs: "5px 6px 28px 2px",
+                                            },
+                                            width: {
+                                              xs: "26px",
+                                              sm: "50px",
+                                              md: "50px",
+                                              xl: "50px",
+                                            },
+                                            cursor: "pointer",
+                                          }}
+                                          className={
+                                            vl.seatid > 10
+                                              ? "innermargin"
+                                              : "seat1"
+                                          }
+                                          onClick={() =>
+                                            bookings(v.busid, vl.seatid)
+                                          }
+                                        >
+                                          <Box
+                                            component="p"
+                                            sx={{
+                                              padding: {
+                                                xl: "5px 2px",
+                                                md: "5px 2px",
+                                                sm: "5px 2px",
+                                                xs: "2px 5px",
+                                              },
+
+                                              border: "1px solid black",
+                                              borderRadius: "3px",
+                                            }}
+                                          ></Box>
+                                        </Box>
+                                      )}
+                                    </Box>
+                                  </Box>
+                                </>
+                              ) : (
+                                ""
+                              );
+                            })}
+                          </Box>
+                        </Box>
+                      </Box>
+
+                      {/* after seats */}
+
+                      <Box
+                        // display={{
+                        //   xs: "block",
+                        //   sm: "flex",
+                        //   xl: "flex",
+                        //   md: "flex",
+                        // }
+                        // }
+                        sx={{ display: "block" }}
+                      >
+                        <Box>Upper-deck</Box>
+                        <Box
+                          sx={
+                            {
+                              // display: "grid",
+                              // columnGap: "30px",
+                              // rowGap: "20px",
+                              // gridTemplateColumns: {
+                              //   xs: "repeat(2,auto)",
+                              //   sm: "repeat(10,auto)",
+                              //   md: "repeat(10,auto)",
+                              //   xl: "repeat(10,auto)",
+                              // },
+                            }
+                          }
+                        >
+                          <Box
+                            className="seatss"
+                            sx={{
+                              borderTop: {
+                                xs: "5px solid gray !important",
+                                sm: "none !important",
+                                md: "none !important",
+                                xl: "none !important",
+                              },
+                              borderLeft: {
+                                xs: "none",
+                                sm: " 5px solid gray !important",
+                                md: " 5px solid gray !important",
+                                xl: " 5px solid gray !important",
+                              },
+
+                              gap: {
+                                xs: "35px",
+                                md: "30px",
+                                xl: "30px",
+                                sm: "30px",
+                              },
+
+                              display: "grid",
+                              columnGap: "30px",
+                              rowGap: "20px",
+
+                              gridTemplateColumns: {
+                                xs: "repeat(2,auto)",
+                                sm: "repeat(5,auto)",
+                                md: "repeat(5,auto)",
+                                xl: "repeat(5,auto)",
+                              },
+                              //                                     row-gap: 20px;
+                              // column-gap: 30px;
+                              // display: grid !important;
+                              // grid-template-columns: repeat(2, auto);
+                            }}
+                          >
+                            {v.seats?.map((vl, ind) => {
+                              return vl.seatid > 10 ? (
+                                <>
+                                  <Box sx={{ display: "flex" }} key={ind}>
+                                    <Box>
+                                      {vl.seatshow ? (
+                                        vl.seatbooking ? (
+                                          <Box
+                                            sx={{
+                                              padding: {
+                                                xl: "5px 3px 5px 5px",
+                                                md: "5px 3px 5px 5px",
+                                                sm: "5px 3px 5px 5px",
+                                                xs: "5px 6px 28px 0px",
+                                              },
+                                              width: {
+                                                xs: "26px",
+                                                sm: "50px",
+                                                md: "50px",
+                                                xl: "50px",
+                                              },
+                                              backgroundColor:
+                                                "rgba(8, 8, 8, 0.137)",
+                                              border: " rgba(0, 0, 0, 0.226)",
+                                              cursor: "pointer",
+                                            }}
+                                            className="seat"
+                                          >
+                                            <p
+                                              style={{
+                                                fontSize: "12px",
+                                                textAlign: "center",
+                                                padding: "6px 10px",
+                                                border: " rgba(0, 0, 0, 0.226)",
+                                              }}
+                                            ></p>
+                                            <Box
+                                              component="p"
+                                              sx={{
+                                                padding: {
+                                                  xl: "5px 2px",
+                                                  md: "5px 2px",
+                                                  sm: "5px 2px",
+                                                  xs: "2px 5px",
+                                                },
+                                                border:
+                                                  "1px solid rgba(0, 0, 0, 0.253)",
+                                                borderRadius: "3px",
+                                              }}
+                                            ></Box>
+                                          </Box>
+                                        ) : (
+                                          <Box
+                                            sx={{
+                                              padding: {
+                                                xl: "4px 3px 4px 0px",
+                                                md: "4px 3px 4px 0px",
+                                                sm: "4px 3px 4px 0px",
+                                                xs: "5px 1px 9px 0px",
+                                              },
+                                              width: {
+                                                xs: "26px",
+                                                sm: "50px",
+                                                md: "50px",
+                                                xl: "50px",
+                                              },
+                                              flexDirection: {
+                                                xs: "column-reverse",
+                                                sm: "unset",
+                                                md: "unset",
+                                                xl: "unset",
+                                              },
+                                              cursor: "pointer",
+                                            }}
                                             className="seat2"
                                             onClick={() =>
                                               bookings(v.busid, vl.seatid)
@@ -1170,41 +1458,68 @@ export const Seatbooks = () => {
                                             >
                                               {vl.seatid}
                                             </p>
-                                            <p
-                                              style={{
-                                                padding: "5px 2px",
+                                            <Box
+                                              component="p"
+                                              sx={{
+                                                padding: {
+                                                  xl: "5px 2px",
+                                                  md: "5px 2px",
+                                                  sm: "5px 2px",
+                                                  xs: "2px 5px",
+                                                },
                                                 border: "1px solid black",
                                                 borderRadius: "3px",
                                               }}
-                                            ></p>
+                                            ></Box>
                                           </Box>
                                         )
                                       ) : (
                                         <Box
+                                          sx={{
+                                            padding: {
+                                              xl: "5px 4px 5px 5px",
+                                              md: "5px 4px 5px 5px",
+                                              sm: "5px 4px 5px 5px",
+                                              xs: "5px 6px 28px 0px",
+                                            },
+                                            width: {
+                                              xs: "26px",
+                                              sm: "50px",
+                                              md: "50px",
+                                              xl: "50px",
+                                            },
+                                            cursor: "pointer",
+                                          }}
                                           className="seat1"
                                           onClick={() =>
                                             bookings(v.busid, vl.seatid)
                                           }
                                         >
-                                          <p
-                                            style={{
-                                              padding: "5px 2px",
+                                          <Box
+                                            component="p"
+                                            sx={{
+                                              padding: {
+                                                xl: "5px 2px",
+                                                md: "5px 2px",
+                                                sm: "5px 2px",
+                                                xs: "2px 5px",
+                                              },
                                               border: "1px solid black",
                                               borderRadius: "3px",
                                             }}
-                                          ></p>
+                                          ></Box>
                                         </Box>
                                       )}
                                     </Box>
                                   </Box>
-                                ) : (
-                                  ""
-                                );
-                              })}
-                            </Box>
+                                </>
+                              ) : (
+                                ""
+                              );
+                            })}
                           </Box>
                         </Box>
-                      </>
+                      </Box>
                     </Box>
 
                     {/* next ticket booking true or false adding space */}

@@ -12,6 +12,7 @@ import { TbLamp2 } from "react-icons/tb";
 import { Typography } from "@mui/material";
 import { FaTag } from "react-icons/fa6";
 import { FaBottleWater } from "react-icons/fa6";
+import { RiBusWifiFill } from "react-icons/ri";
 import SosIcon from "@mui/icons-material/Sos";
 import ReactDatePicker from "react-datepicker";
 import { PiSunHorizon } from "react-icons/pi";
@@ -312,7 +313,8 @@ export const Booking = () => {
         setShowModal(false);
       }, 3000);
     }
-  }, [dubl, monthAbbreviation, day, month, year, dt, showModal]);
+  }, [dubl, monthAbbreviation, day, month, year, dt, showModal, bokng]);
+
   if (dubli?.length > 0) {
     mfy?.filter((vlss, idss) => {
       return vlss.busid === find_busid
@@ -2021,13 +2023,19 @@ export const Booking = () => {
                                 </Box>
                                 <Box
                                   sx={{
-                                    display: "flex",
+                                    display: {
+                                      xs: "none",
+                                      sm: "flex",
+                                      md: "flex",
+                                      xl: "flex",
+                                    },
                                     alignItems: "center",
                                     justifyContent: "space-around",
                                   }}
                                 >
                                   {v.livetracking ? (
-                                    <span
+                                    <Box
+                                      component="span"
                                       style={{
                                         backgroundColor: " #c2c2c2",
                                         padding: "4px",
@@ -2039,7 +2047,7 @@ export const Booking = () => {
                                         style={{ marginRignt: " 5px" }}
                                       />
                                       Live Tracking
-                                    </span>
+                                    </Box>
                                   ) : (
                                     ""
                                   )}
@@ -2112,7 +2120,7 @@ export const Booking = () => {
                               <Box
                                 sx={{
                                   width: {
-                                    xs: "65%",
+                                    xs: "80%",
                                     sm: "80%",
                                     md: "45%",
                                     xl: "35%",
@@ -2120,24 +2128,146 @@ export const Booking = () => {
                                 }}
                               >
                                 <Box sx={{ display: "block" }}>
-                                  <Box> upper - deck</Box>
-                                  <Box sx={{ display: "flex" }}>
+                                  <Box> Lower - deck</Box>
+                                  <Box
+                                    sx={{
+                                      display: {
+                                        xs: "block",
+                                        sm: "flex",
+                                        md: "flex",
+                                        xl: "flex",
+                                      },
+                                    }}
+                                  >
                                     <Box
                                       sx={{
                                         paddingLeft: "5px !important",
                                         backgroundColor: "white",
-                                        borderLeft: " 5px solid gray",
-                                        borderRight: "1px solid black",
-                                        paddingRight: "5px",
-                                        paddingTop: "12px",
+                                        borderTop: {
+                                          xs: "5px solid gray",
+                                          sm: "none",
+                                          md: "none",
+                                          xl: "none",
+                                        },
+                                        borderLeft: {
+                                          xs: "none",
+                                          sm: " 5px solid gray",
+                                          md: " 5px solid gray",
+                                          xl: " 5px solid gray",
+                                        },
+
+                                        borderRight: {
+                                          xs: "none",
+                                          md: "1px solid black",
+                                          sm: "1px solid black",
+                                          xl: "1px solid black",
+                                        },
+                                        borderBottom: {
+                                          xs: "1px solid black",
+                                          sm: "none",
+                                          md: "none",
+                                          xl: "none",
+                                        },
+                                        paddingRight: {
+                                          xs: "none",
+                                          sm: "5px",
+                                          md: "5px",
+                                          xl: "5px",
+                                        },
+                                        paddingTop: {
+                                          xs: "5px",
+                                          md: "12px",
+                                          sm: "12px",
+                                          xl: "12px",
+                                        },
+                                        paddingBottom: {
+                                          xs: "10px",
+                                          sm: "0",
+                                          md: "0",
+                                          xl: "0",
+                                        },
                                       }}
                                     >
-                                      <h1 className="steer1">
-                                        <h2 className="steercenter"></h2>
-                                        <h2 className="steercenter2"></h2>
-                                      </h1>
+                                      <Box
+                                        sx={{
+                                          opacity: {
+                                            xs: "0",
+                                            sm: "1",
+                                            md: "1",
+                                            xl: "1",
+                                          },
+                                          display: {
+                                            xs: "none",
+                                            sm: "block",
+                                            md: "block",
+                                            xl: "block",
+                                          },
+                                        }}
+                                      >
+                                        <h1 className="steer1">
+                                          <h2 className="steercenter"></h2>
+                                          {/* <h2 className="steercenter2"></h2> */}
+                                        </h1>
+                                      </Box>
+                                      <Box
+                                        sx={{
+                                          opacity: {
+                                            xs: "1",
+                                            sm: "0",
+                                            md: "0",
+                                            xl: "0",
+                                          },
+                                          display: {
+                                            xs: "block",
+                                            sm: "none",
+                                            md: "none",
+                                            xl: "none",
+                                          },
+                                        }}
+                                      >
+                                        <h1 className="steer2">
+                                          <h2 className="steercenter1"></h2>
+                                          {/* <h2 className="steercenter2"></h2> */}
+                                        </h1>
+                                      </Box>
                                     </Box>
-                                    <Box className="seatss">
+                                    <Box
+                                      sx={{
+                                        // borderLeft: {
+                                        //   xs: "none",
+                                        //   sm: "5px solid gray !important",
+                                        //   md: "5px solid gray !important",
+                                        //   xl: "5px solid gray !important",
+                                        // },
+                                        // borderTop: {
+                                        //   xs: "5px solid gray !important",
+                                        //   sm: "none",
+                                        //   md: "none",
+                                        //   xl: "none",
+                                        // },
+
+                                        gap: {
+                                          xs: "35px",
+                                          md: "30px",
+                                          xl: "30px",
+                                          sm: "30px",
+                                        },
+                                        display: "grid",
+                                        columnGap: "30px",
+                                        rowGap: "20px",
+                                        gridTemplateColumns: {
+                                          xs: "repeat(2,auto)",
+                                          sm: "repeat(5,auto)",
+                                          md: "repeat(5,auto)",
+                                          xl: "repeat(5,auto)",
+                                        },
+                                        //                                     row-gap: 20px;
+                                        // column-gap: 30px;
+                                        // display: grid !important;
+                                        // grid-template-columns: repeat(2, auto);
+                                      }}
+                                      className="seatss"
+                                    >
                                       {v.seats?.map((vl, ind) => {
                                         return vl.seatid <= 10 ? (
                                           <>
@@ -2150,10 +2280,23 @@ export const Booking = () => {
                                                   vl.seatbooking ? (
                                                     <Box
                                                       sx={{
+                                                        padding: {
+                                                          xl: "5px 3px 5px 5px",
+                                                          md: "5px 3px 5px 5px",
+                                                          sm: "5px 3px 5px 5px",
+                                                          xs: "5px 6px 28px 0px",
+                                                        },
+                                                        width: {
+                                                          xs: "26px",
+                                                          sm: "50px",
+                                                          md: "50px",
+                                                          xl: "50px",
+                                                        },
                                                         backgroundColor:
                                                           "rgba(8, 8, 8, 0.137)",
                                                         border:
                                                           " rgba(0, 0, 0, 0.226)",
+                                                        cursor: "pointer",
                                                       }}
                                                       className="seat"
                                                     >
@@ -2161,23 +2304,50 @@ export const Booking = () => {
                                                         style={{
                                                           fontSize: "12px",
                                                           textAlign: "center",
-                                                          padding: "6px 10px",
+                                                          // padding: "6px 10px",
                                                           border:
                                                             " rgba(0, 0, 0, 0.226)",
                                                         }}
                                                       ></p>
-                                                      <p
-                                                        style={{
-                                                          padding: "5px 2px",
+                                                      <Box
+                                                        component="p"
+                                                        sx={{
+                                                          padding: {
+                                                            xl: "5px 2px",
+                                                            md: "5px 2px",
+                                                            sm: "5px 2px",
+                                                            xs: "2px 5px",
+                                                          },
                                                           border:
                                                             "1px solid rgba(0, 0, 0, 0.253)",
                                                           borderRadius: "3px",
                                                         }}
-                                                      ></p>
+                                                      ></Box>
                                                     </Box>
                                                   ) : (
                                                     <Box
                                                       className="seat2"
+                                                      sx={{
+                                                        padding: {
+                                                          xl: "4px 3px 4px 0px",
+                                                          md: "4px 3px 4px 0px",
+                                                          sm: "4px 3px 4px 0px",
+                                                          xs: "5px 1px 9px 0px",
+                                                        },
+                                                        width: {
+                                                          xs: "26px",
+                                                          sm: "50px",
+                                                          md: "50px",
+                                                          xl: "50px",
+                                                        },
+                                                        flexDirection: {
+                                                          xs: "column-reverse",
+                                                          sm: "unset",
+                                                          md: "unset",
+                                                          xl: "unset",
+                                                        },
+                                                        cursor: "pointer",
+                                                      }}
                                                       onClick={() =>
                                                         bookings(
                                                           v.busid,
@@ -2189,23 +2359,44 @@ export const Booking = () => {
                                                         style={{
                                                           fontSize: "12px",
                                                           textAlign: "center",
-                                                          padding: "0px 10px",
+                                                          // padding: "0px 10px",
                                                         }}
                                                       >
                                                         {vl.seatid}
                                                       </p>
-                                                      <p
-                                                        style={{
-                                                          padding: "5px 2px",
+                                                      <Box
+                                                        component="p"
+                                                        sx={{
+                                                          padding: {
+                                                            xl: "5px 2px",
+                                                            md: "5px 2px",
+                                                            sm: "5px 2px",
+                                                            xs: "2px 5px",
+                                                          },
                                                           border:
                                                             "1px solid black",
                                                           borderRadius: "3px",
                                                         }}
-                                                      ></p>
+                                                      ></Box>
                                                     </Box>
                                                   )
                                                 ) : (
                                                   <Box
+                                                    sx={{
+                                                      padding: {
+                                                        xl: "5px 3px 5px 5px",
+                                                        md: "5px 3px 5px 5px",
+                                                        sm: "5px 3px 5px 5px",
+                                                        xs: "5px 6px 28px 2px",
+                                                      },
+                                                      width: {
+                                                        xs: "26px",
+                                                        sm: "50px",
+                                                        md: "50px",
+                                                        xl: "50px",
+                                                      },
+                                                      cursor: "pointer",
+                                                    }}
                                                     className={
                                                       vl.seatid > 10
                                                         ? "innermargin"
@@ -2218,14 +2409,21 @@ export const Booking = () => {
                                                       )
                                                     }
                                                   >
-                                                    <p
-                                                      style={{
-                                                        padding: "5px 2px",
+                                                    <Box
+                                                      component="p"
+                                                      sx={{
+                                                        padding: {
+                                                          xl: "5px 2px",
+                                                          md: "5px 2px",
+                                                          sm: "5px 2px",
+                                                          xs: "2px 5px",
+                                                        },
+
                                                         border:
                                                           "1px solid black",
                                                         borderRadius: "3px",
                                                       }}
-                                                    ></p>
+                                                    ></Box>
                                                   </Box>
                                                 )}
                                               </Box>
@@ -2251,13 +2449,59 @@ export const Booking = () => {
                                   // }
                                   sx={{ display: "block" }}
                                 >
-                                  <Box>lower-deck</Box>
-                                  <Box sx={{ display: "flex" }}>
+                                  <Box>Upper-deck</Box>
+                                  <Box
+                                    sx={
+                                      {
+                                        // display: "grid",
+                                        // columnGap: "30px",
+                                        // rowGap: "20px",
+                                        // gridTemplateColumns: {
+                                        //   xs: "repeat(2,auto)",
+                                        //   sm: "repeat(10,auto)",
+                                        //   md: "repeat(10,auto)",
+                                        //   xl: "repeat(10,auto)",
+                                        // },
+                                      }
+                                    }
+                                  >
                                     <Box
                                       className="seatss"
                                       sx={{
-                                        borderLeft: "5px solid gray !important",
-                                        paddingLeft: "50px !important",
+                                        borderTop: {
+                                          xs: "5px solid gray !important",
+                                          sm: "none !important",
+                                          md: "none !important",
+                                          xl: "none !important",
+                                        },
+                                        borderLeft: {
+                                          xs: "none",
+                                          sm: " 5px solid gray !important",
+                                          md: " 5px solid gray !important",
+                                          xl: " 5px solid gray !important",
+                                        },
+
+                                        gap: {
+                                          xs: "35px",
+                                          md: "30px",
+                                          xl: "30px",
+                                          sm: "30px",
+                                        },
+
+                                        display: "grid",
+                                        columnGap: "30px",
+                                        rowGap: "20px",
+
+                                        gridTemplateColumns: {
+                                          xs: "repeat(2,auto)",
+                                          sm: "repeat(5,auto)",
+                                          md: "repeat(5,auto)",
+                                          xl: "repeat(5,auto)",
+                                        },
+                                        //                                     row-gap: 20px;
+                                        // column-gap: 30px;
+                                        // display: grid !important;
+                                        // grid-template-columns: repeat(2, auto);
                                       }}
                                     >
                                       {v.seats?.map((vl, ind) => {
@@ -2272,10 +2516,23 @@ export const Booking = () => {
                                                   vl.seatbooking ? (
                                                     <Box
                                                       sx={{
+                                                        padding: {
+                                                          xl: "5px 3px 5px 5px",
+                                                          md: "5px 3px 5px 5px",
+                                                          sm: "5px 3px 5px 5px",
+                                                          xs: "5px 6px 28px 0px",
+                                                        },
+                                                        width: {
+                                                          xs: "26px",
+                                                          sm: "50px",
+                                                          md: "50px",
+                                                          xl: "50px",
+                                                        },
                                                         backgroundColor:
                                                           "rgba(8, 8, 8, 0.137)",
                                                         border:
                                                           " rgba(0, 0, 0, 0.226)",
+                                                        cursor: "pointer",
                                                       }}
                                                       className="seat"
                                                     >
@@ -2288,17 +2545,44 @@ export const Booking = () => {
                                                             " rgba(0, 0, 0, 0.226)",
                                                         }}
                                                       ></p>
-                                                      <p
-                                                        style={{
-                                                          padding: "5px 2px",
+                                                      <Box
+                                                        component="p"
+                                                        sx={{
+                                                          padding: {
+                                                            xl: "5px 2px",
+                                                            md: "5px 2px",
+                                                            sm: "5px 2px",
+                                                            xs: "2px 5px",
+                                                          },
                                                           border:
                                                             "1px solid rgba(0, 0, 0, 0.253)",
                                                           borderRadius: "3px",
                                                         }}
-                                                      ></p>
+                                                      ></Box>
                                                     </Box>
                                                   ) : (
                                                     <Box
+                                                      sx={{
+                                                        padding: {
+                                                          xl: "4px 3px 4px 0px",
+                                                          md: "4px 3px 4px 0px",
+                                                          sm: "4px 3px 4px 0px",
+                                                          xs: "5px 1px 9px 0px",
+                                                        },
+                                                        width: {
+                                                          xs: "26px",
+                                                          sm: "50px",
+                                                          md: "50px",
+                                                          xl: "50px",
+                                                        },
+                                                        flexDirection: {
+                                                          xs: "column-reverse",
+                                                          sm: "unset",
+                                                          md: "unset",
+                                                          xl: "unset",
+                                                        },
+                                                        cursor: "pointer",
+                                                      }}
                                                       className="seat2"
                                                       onClick={() =>
                                                         bookings(
@@ -2316,18 +2600,39 @@ export const Booking = () => {
                                                       >
                                                         {vl.seatid}
                                                       </p>
-                                                      <p
-                                                        style={{
-                                                          padding: "5px 2px",
+                                                      <Box
+                                                        component="p"
+                                                        sx={{
+                                                          padding: {
+                                                            xl: "5px 2px",
+                                                            md: "5px 2px",
+                                                            sm: "5px 2px",
+                                                            xs: "2px 5px",
+                                                          },
                                                           border:
                                                             "1px solid black",
                                                           borderRadius: "3px",
                                                         }}
-                                                      ></p>
+                                                      ></Box>
                                                     </Box>
                                                   )
                                                 ) : (
                                                   <Box
+                                                    sx={{
+                                                      padding: {
+                                                        xl: "5px 4px 5px 5px",
+                                                        md: "5px 4px 5px 5px",
+                                                        sm: "5px 4px 5px 5px",
+                                                        xs: "5px 6px 28px 0px",
+                                                      },
+                                                      width: {
+                                                        xs: "26px",
+                                                        sm: "50px",
+                                                        md: "50px",
+                                                        xl: "50px",
+                                                      },
+                                                      cursor: "pointer",
+                                                    }}
                                                     className="seat1"
                                                     onClick={() =>
                                                       bookings(
@@ -2336,14 +2641,20 @@ export const Booking = () => {
                                                       )
                                                     }
                                                   >
-                                                    <p
-                                                      style={{
-                                                        padding: "5px 2px",
+                                                    <Box
+                                                      component="p"
+                                                      sx={{
+                                                        padding: {
+                                                          xl: "5px 2px",
+                                                          md: "5px 2px",
+                                                          sm: "5px 2px",
+                                                          xs: "2px 5px",
+                                                        },
                                                         border:
                                                           "1px solid black",
                                                         borderRadius: "3px",
                                                       }}
-                                                    ></p>
+                                                    ></Box>
                                                   </Box>
                                                 )}
                                               </Box>
@@ -2377,25 +2688,70 @@ export const Booking = () => {
                                 >
                                   <Box>
                                     <p>available</p>
-                                    <Box className="dumyseat1">
-                                      <p
-                                        style={{
-                                          padding: "5px 2px",
+                                    <Box
+                                      sx={{
+                                        padding: {
+                                          xl: "5px 3px 5px 5px",
+                                          md: "5px 3px 5px 5px",
+                                          sm: "5px 3px 5px 5px",
+                                          xs: "5px 6px 28px 0px",
+                                        },
+                                        width: {
+                                          xs: "26px",
+                                          sm: "50px",
+                                          md: "50px",
+                                          xl: "50px",
+                                        },
+                                      }}
+                                      className="dumyseat1"
+                                    >
+                                      <Box
+                                        component="p"
+                                        sx={{
+                                          padding: {
+                                            xl: "5px 2px",
+                                            md: "5px 2px",
+                                            sm: "5px 2px",
+                                            xs: "2px 5px",
+                                          },
                                           border: "1px solid black",
                                           borderRadius: "3px",
                                         }}
-                                      ></p>
+                                      ></Box>
                                     </Box>
                                     <p>unavailable</p>
-                                    <Box key={3} className="dumyseat">
-                                      <p
-                                        style={{
-                                          padding: "5px 2px",
+                                    <Box
+                                      sx={{
+                                        padding: {
+                                          xl: "5px 3px 5px 5px",
+                                          md: "5px 3px 5px 5px",
+                                          sm: "5px 3px 5px 5px",
+                                          xs: "5px 6px 28px 0px",
+                                        },
+                                        width: {
+                                          xs: "26px",
+                                          sm: "50px",
+                                          md: "50px",
+                                          xl: "50px",
+                                        },
+                                      }}
+                                      key={3}
+                                      className="dumyseat"
+                                    >
+                                      <Box
+                                        component="p"
+                                        sx={{
+                                          padding: {
+                                            xl: "5px 2px",
+                                            md: "5px 2px",
+                                            sm: "5px 2px",
+                                            xs: "2px 5px",
+                                          },
                                           border:
                                             "1px solid rgba(0, 0, 0, 0.251)",
                                           borderRadius: "3px",
                                         }}
-                                      ></p>{" "}
+                                      ></Box>{" "}
                                     </Box>
                                   </Box>
 
