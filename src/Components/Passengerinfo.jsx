@@ -20,13 +20,9 @@ import { passengerinfo, updates } from "./Slices";
 
 export const Passengerinf = (mins) => {
   let [parms] = useSearchParams();
-  let stid = Number(parms.get("stid"));
-  let bsid = Number(parms.get("bsid"));
-  let busnm = Number(parms.get("busnm"));
   let dtss = parms.get("dates");
   const datess = new Date(dtss);
 
-  const pasenger = useSelector((da) => da.datas.passengers);
   const stat = useSelector((dat) => dat.datas.Ars);
   //console(mins);
   const [selectedOption, setSelectedOption] = useState("");
@@ -38,7 +34,6 @@ export const Passengerinf = (mins) => {
   const [inp6, setInp6] = useState("");
   const [open, setOpen] = useState(false);
   const [erors, setErors] = useState(false);
-  const [showPassword, setshowPassword] = useState(false);
   const dispatch = useDispatch();
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -68,9 +63,7 @@ export const Passengerinf = (mins) => {
       setInp5(value);
     }
   };
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
+
   let rdio = (s) => {
     setSelectedOption(s.target.value);
   };
@@ -105,9 +98,7 @@ export const Passengerinf = (mins) => {
       `/booking?bsnm=${mins.bsnm}&&sho=${mins.bsid}&&gopoint=${orgnlbus.from}&&reachpoint=${orgnlbus.to}&&dates=${datess}`
     );
   };
-  const handleClickShowPassword = () => {
-    setshowPassword(!showPassword);
-  };
+ 
 
   let proceedaa = () => {
     if (
