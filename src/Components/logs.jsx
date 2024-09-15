@@ -5,19 +5,13 @@ import { PiUserCircle } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
 import Button from "@mui/material/Button";
 
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { Box } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import { MdAccountCircle } from "react-icons/md";
-import Pass from "./Pass";
 import PropTypes from "prop-types";
 import { styled } from "@mui/system";
-// import { Button } from "@mui/base/Button";
-// import { Button } from "@mui/material"
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Input as BaseInput, inputClasses } from "@mui/base/Input";
-import Visibility from "@mui/material/Icon";
 
 const Input = React.forwardRef(function CustomInput(props, ref) {
   const { slots, ...other } = props;
