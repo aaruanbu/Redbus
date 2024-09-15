@@ -5,7 +5,7 @@ import { TbArrowsLeftRight } from "react-icons/tb";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import ReactDatePicker from "react-datepicker";
-import { booktrue, dublicate, updates } from "./Slices";
+import {  dublicate, updates } from "./Slices";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import oops from "./Img/Oops.svg";
 export const Notfound = () => {
@@ -38,8 +38,7 @@ export const Notfound = () => {
   const [year, setYear] = useState();
   const [month, setMont] = useState();
   const [formattedDate, setFormatted] = useState();
-  useEffect(() => {
-    // //////console(typeof dt)
+  useEffect(() => {5
     if (typeof dt === "object" && dt !== null) {
       const dates_1 = dt.getDate();
       const monttr = dt.getMonth();
