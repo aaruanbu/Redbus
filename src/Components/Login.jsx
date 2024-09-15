@@ -1,7 +1,5 @@
-import React from "react"
-import {RiCustomerServiceLine} from "react-icons/ri"
-import {PiUserCircle} from "react-icons/pi"
-import { Box, Button, Container } from "@mui/material"
+import React from "react";
+import { Box, Button, Container } from "@mui/material";
 export const Logns=()=>{
     
 
